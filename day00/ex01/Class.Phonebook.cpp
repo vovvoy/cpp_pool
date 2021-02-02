@@ -1,5 +1,9 @@
 #include "Phonebook.hpp"
 
+Phonebook::Phonebook() {
+    std::cout << "Welcome to phonebook!!!\n";
+}
+
 void Phonebook::setFieldName(){
     _field_name[0] = "firs name: ";
     _field_name[1] = "last name: ";
@@ -32,7 +36,6 @@ void Phonebook::addContact(){
             else
                 std::cout << "Empty input!!!\n";
         }
-        std::cout << "\n\n";
         str = "";
     }
     for (int i = 3; i < 11; i++) {
@@ -46,14 +49,20 @@ void Phonebook::addContact(){
 
 void Phonebook::viewContactDetails(){
     std::string str;
-
-    std::cout << "To get more information about contact tell me index or just press enter to go main manu.\n";
-    std::getline(std::cin, str);
-    if (str.size() == 1 && str[0] - 48 - 1 < _index) {
-        std::cout <<"\n\n";
-        for (int i = 0; i < 11; i++)
-            std::cout << _field_name[i] << "->  " << _contacts[str[0] - 48 - 1].getContactInfo(i) << std::endl;
-        viewAllContacts();
+    while ( std::cin ) {
+        std::cout << "To get more information about contact tell me index or just press enter to go main manu.\n\n";
+        std::getline(std::cin, str);
+        if (str.size() == 0)
+            return ;
+        if (str.size() == 1 && str[0] - 49 > -1 && str[0] - 49 < _index) {
+            std::cout << "\n\n";
+            for (int i = 0; i < 11; i++)
+                std::cout << _field_name[i] << "->  " << _contacts[str[0] - 48 - 1].getContactInfo(i) << std::endl;
+            viewAllContacts();
+        }
+        if (str.size() == 1 && str[0] - 49 > -1 && str[0] - 49 < _index)
+            return;
+        std::cout << "\nWrong index typed!!!\n\n";
     }
 }
 
@@ -85,4 +94,8 @@ void Phonebook::viewAllContacts(){
     }
     std::cout << "\n\n";
     viewContactDetails();
+}
+
+Phonebook::~Phonebook() {
+    std::cout << "See you!!!\n";
 }

@@ -9,11 +9,13 @@ private:
     std::string _field_name[11];
     int     _index;
 public:
+    Phonebook();
     void setFieldName();
     void setIndex();
     void addContact();
     void viewContactDetails();
     void viewAllContacts();
+    ~Phonebook();
 };
 
 #endif
