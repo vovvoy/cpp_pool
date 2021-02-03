@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ljerrica/Desktop/cpp_pool/day01/ex03/Zombie.hpp
+iostream
+-
+string
+-
+cstdlib
+-
+ctime
+-
+
+/Users/ljerrica/Desktop/cpp_pool/day01/ex03/ZombieHorde.hpp
+Zombie.hpp
+/Users/ljerrica/Desktop/cpp_pool/day01/ex03/Zombie.hpp
+
+/Users/ljerrica/Desktop/cpp_pool/day01/ex03/main.cpp
+ZombieHorde.hpp
+/Users/ljerrica/Desktop/cpp_pool/day01/ex03/ZombieHorde.hpp
+
