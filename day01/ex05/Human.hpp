@@ -5,11 +5,11 @@
 
 class Human {
 private:
-	Brain a;
+	Brain _a = Brain();
 public:
 	Human();
-	Brain* getBrain(Brain* a);
-	void identify();
+	Brain &getBrain();
+	std::string identify() const;
 	~Human();
 };
 #endif

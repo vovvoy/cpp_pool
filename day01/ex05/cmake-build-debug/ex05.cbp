@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/ljerrica/Desktop/cpp_pool/day01/ex05/Brain.cpp">
+			<Option target="ex05"/>
+		</Unit>
+		<Unit filename="/Users/ljerrica/Desktop/cpp_pool/day01/ex05/Brain.hpp">
+			<Option target="ex05"/>
+		</Unit>
+		<Unit filename="/Users/ljerrica/Desktop/cpp_pool/day01/ex05/Human.cpp">
+			<Option target="ex05"/>
+		</Unit>
+		<Unit filename="/Users/ljerrica/Desktop/cpp_pool/day01/ex05/Human.hpp">
+			<Option target="ex05"/>
+		</Unit>
 		<Unit filename="/Users/ljerrica/Desktop/cpp_pool/day01/ex05/main.cpp">
 			<Option target="ex05"/>
 		</Unit>

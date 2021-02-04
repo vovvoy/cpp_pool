@@ -3,6 +3,7 @@
 
 # include <iostream>
 # include <string>
+# include <sstream>
 
 class Brain {
 private:
@@ -10,7 +11,7 @@ private:
 	std::string _nickname;
 public:
 	Brain();
-	std::string* identify();
+	std::string identify() const;
 	~Brain();
 };
 #endif

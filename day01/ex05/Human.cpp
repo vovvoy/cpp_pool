@@ -1,11 +1,11 @@
-#include "Humap.hpp"
+#include "Human.hpp"
 
 Human::Human() {}
 
-Brain* Human::getBrain(Brain *a) {
-	return (a);
+Brain &Human::getBrain() {
+	return (_a);
 }
-void Human::identify() {
-	std::cout << getBrain(a) << std::endl;
+std::string  Human::identify() const{
+	return (_a.identify());
 }
 Human::~Human() {}

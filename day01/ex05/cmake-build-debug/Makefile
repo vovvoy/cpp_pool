@@ -143,6 +143,60 @@ ex05/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex05.dir/build.make CMakeFiles/ex05.dir/build
 .PHONY : ex05/fast
 
+Brain.o: Brain.cpp.o
+
+.PHONY : Brain.o
+
+# target to build an object file
+Brain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex05.dir/build.make CMakeFiles/ex05.dir/Brain.cpp.o
+.PHONY : Brain.cpp.o
+
+Brain.i: Brain.cpp.i
+
+.PHONY : Brain.i
+
+# target to preprocess a source file
+Brain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex05.dir/build.make CMakeFiles/ex05.dir/Brain.cpp.i
+.PHONY : Brain.cpp.i
+
+Brain.s: Brain.cpp.s
+
+.PHONY : Brain.s
+
+# target to generate assembly for a file
+Brain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex05.dir/build.make CMakeFiles/ex05.dir/Brain.cpp.s
+.PHONY : Brain.cpp.s
+
+Human.o: Human.cpp.o
+
+.PHONY : Human.o
+
+# target to build an object file
+Human.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex05.dir/build.make CMakeFiles/ex05.dir/Human.cpp.o
+.PHONY : Human.cpp.o
+
+Human.i: Human.cpp.i
+
+.PHONY : Human.i
+
+# target to preprocess a source file
+Human.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex05.dir/build.make CMakeFiles/ex05.dir/Human.cpp.i
+.PHONY : Human.cpp.i
+
+Human.s: Human.cpp.s
+
+.PHONY : Human.s
+
+# target to generate assembly for a file
+Human.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex05.dir/build.make CMakeFiles/ex05.dir/Human.cpp.s
+.PHONY : Human.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +233,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ex05"
+	@echo "... Brain.o"
+	@echo "... Brain.i"
+	@echo "... Brain.s"
+	@echo "... Human.o"
+	@echo "... Human.i"
+	@echo "... Human.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
