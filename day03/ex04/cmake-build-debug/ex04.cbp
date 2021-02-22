@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ex04"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ex04">
+				<Option output="/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/ex04" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex04"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ex04/fast">
+				<Option output="/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/ex04" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex04/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ljerrica/Desktop/cpp_pool/day03/ex04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/ClapTrap.cpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/ClapTrap.hpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/FragTrap.cpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/FragTrap.hpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/NinjaTrap.cpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/NinjaTrap.hpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/ScavTrap.cpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/ScavTrap.hpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/SuperTrap.cpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/SuperTrap.hpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/main.cpp">
+			<Option target="ex04"/>
+		</Unit>
+		<Unit filename="/home/ljerrica/Desktop/cpp_pool/day03/ex04/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

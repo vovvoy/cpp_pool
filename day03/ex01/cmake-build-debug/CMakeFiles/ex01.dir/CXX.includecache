@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ljerrica/Desktop/cpp_pool/day03/ex01/FragTrap.cpp
+FragTrap.hpp
+/home/ljerrica/Desktop/cpp_pool/day03/ex01/FragTrap.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day03/ex01/FragTrap.hpp
+iostream
+-
+string
+-
+cstdlib
+-
+ctime
+-
+

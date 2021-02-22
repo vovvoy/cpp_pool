@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ljerrica/Desktop/cpp_pool/day03/ex04/ClapTrap.hpp
+iostream
+-
+string
+-
+stdlib.h
+-
+time.h
+-
+
+/home/ljerrica/Desktop/cpp_pool/day03/ex04/ScavTrap.cpp
+ScavTrap.hpp
+/home/ljerrica/Desktop/cpp_pool/day03/ex04/ScavTrap.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day03/ex04/ScavTrap.hpp
+iostream
+-
+string
+-
+cstdlib
+-
+ctime
+-
+ClapTrap.hpp
+/home/ljerrica/Desktop/cpp_pool/day03/ex04/ClapTrap.hpp
+
