@@ -1,29 +1,6 @@
 #include "ScavTrap.hpp"
 
-
-typedef void(ScavTrap::* attacks) (std::string const & target);
-
-static void pre_message(std::string& name, unsigned int hp)
-{
-    std::cout << "FR4G-TP " << name << "(" << hp << ") : ";
-}
-/*
-** @brief Default contructor:
-** The "ScavTrap".
-*/
-ScavTrap::ScavTrap()
-        :	ClapTrap(0,0,0,0,0,"",0,0,0)
-{
-    srand(time(NULL));
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "Time to defense our Dreams!!!(scavtrap)" << std::endl;
-}
-
-/*
-** @brief Init contrcutor:
-** The "ScavTrap".
-*/
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(const std::string name)
         :	ClapTrap(
         100,
         100,
@@ -36,92 +13,62 @@ ScavTrap::ScavTrap(std::string name)
         3
 )
 {
-    srand(time(NULL));
     pre_message(this->_name, this->_hit_points);
-    std::cout << "Time to defense our Dreams!!!(scavtrap)" << std::endl;
+    std::cout << "Time to defense our Dreams!!!" << std::endl;
 }
 
-/*
-** @brief Copy:
-** Copy the "ScavTrap".
-**
-** @param copy the "ScavTrap" to copy.
-*/
-ScavTrap::ScavTrap(const ScavTrap& op)
+ScavTrap::ScavTrap(const ScavTrap & op)
         :
         ClapTrap(op)
 {
-    srand(time(NULL));
     pre_message(this->_name, this->_hit_points);
-    std::cout << "Time to defense our Dreams!!!(scavtrap)" << std::endl;
+    std::cout << "Time to defense our Dreams!!!" << std::endl;
 }
 
-/*
-** @brief Destructor:
-** Called when the object "ScavTrap" is delete
-*/
 ScavTrap::~ScavTrap()
 {
     pre_message(this->_name, this->_hit_points);
-    std::cout << "Do not forgot me!!!(scavtrap)" << std::endl;
+    std::cout << "Do not forgot me!!!" << std::endl;
 }
 
 ScavTrap & ScavTrap::operator=(const ScavTrap& op)
 {
     if (this == &op)
         return (*this);
-    ClapTrap::operator=(op);
+    ClapTrap::operator = (op);
     return (*this);
 }
 
-
-
-void		ScavTrap::blablaAttack(std::string const & target)
+void        ScavTrap::rangedAttack(std::string const & target)
 {
     pre_message(this->_name, this->_hit_points);
-    std::cout << "It just blabla attack for about 42 points!!! Be ready " << target << "(fragtrap)." << std::endl;
+    std::cout << "Try this " << target << "! Damage point -> " << this->_ranged_attack_damage << "." << std::endl;
 }
 
-void		ScavTrap::school21Attack(std::string const & target)
+void        ScavTrap::meleeAttack(std::string const & target)
 {
     pre_message(this->_name, this->_hit_points);
-    std::cout << "OOO that's a special attack which takes 21 points!!! " << target << " time to study at school 21(fragtrap)!!!" << std::endl;
+    std::cout << "It is over " << target << "!!! You will die!!! meleeAttackPoint -> " << this->_melee_attack_damage << "!" << std::endl;
 }
 
-void		ScavTrap::fartAttack(std::string const & target)
+std::string ScavTrap::_challenges[8] = {
+    "I'm not handsome but...",
+    "I can give my hand to someone who need help...",
+    "Because beauty is required in heart not in face....",
+    "To love someone is nothing.",
+    "To be loved by someone is something.",
+    "But, to be loved by the one you love is everything!",
+    "Words have power!",
+    "Be careful who you trust."
+};
+
+void        ScavTrap::challengeNewcomer(std::string const & target)
 {
     pre_message(this->_name, this->_hit_points);
-    std::cout << "Hahaha it's  just a joke and take 5 points!!! " << target << " time to... you know to what(fragtrap)!"<< std::endl;
+    std::cout << ScavTrap::_challenges[std::rand() % 8] << std::endl;
 }
 
-void		ScavTrap::lostAttack(std::string const & target)
+void pre_message(std::string& name, unsigned int hp)
 {
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "It's my stronges attack!!! " << target << " , you will be die(fragtrap)!" << std::endl;
-}
-
-void		ScavTrap::funnyAttack(std::string const & target)
-{
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "To make some fun!!! " << target << " try to smile sometimes (fragtrap)!!!" << std::endl;
-}
-
-void		ScavTrap::challengeNewcomer(std::string const & target)
-{
-    attacks cmd[] = {
-            &ScavTrap::blablaAttack,
-            &ScavTrap::school21Attack,
-            &ScavTrap::fartAttack,
-            &ScavTrap::lostAttack,
-            &ScavTrap::funnyAttack
-    };
-
-    if (this->_energy_points < 25)
-    {
-        pre_message(this->_name, this->_hit_points);
-        std::cout << "You gonna die at the next time(fragtrap)!!!" << std::endl;
-        return;
-    }
-    (this->*cmd[rand() % 5])(target);
-    this->_energy_points -= 25;
+    std::cout << "SC4V-TP " << name << "(" << hp << ") : ";
 }

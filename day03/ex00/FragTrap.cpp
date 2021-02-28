@@ -1,20 +1,5 @@
 #include "FragTrap.hpp"
 
-
-typedef void(FragTrap::* attacks) (std::string const & target);
-
-static void pre_message(std::string& name, unsigned int hp)
-{
-    std::cout << "FR4G-TP " << name << "(" << hp << ") : ";
-}
-
-FragTrap::FragTrap()
-{
-    srand(time(NULL));
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "Time to defense our Dreams!!!" << std::endl;
-}
-
 FragTrap::FragTrap(std::string name)
         :
         _hit_points(100),
@@ -85,33 +70,42 @@ void		FragTrap::meleeAttack(std::string const & target)
 
 void		FragTrap::takeDamage(unsigned int amount)
 {
-    amount -= this->_armor_damage_reduction;
-    if (amount > this->_hit_points)
-        amount = this->_hit_points;
-    this->_hit_points -= amount;
+    if (amount > this->_armor_damage_reduction)
+        amount -= this->_armor_damage_reduction;
+    else
+        amount = 0;
+
+    if (amount < this->_hit_points)
+        this->_hit_points -= amount;
+    else
+        this->_hit_points = 0;
+
     pre_message(this->_name, this->_hit_points);
-    std::cout << "Nice try!" << "But it just take " << amount + this->_armor_damage_reduction << " of my HP!!!" << std::endl;
+    std::cout << "Nice try!     But it just take " << amount  << " of my HP!!!" << std::endl;
 }
 
 void		FragTrap::beRepaired(unsigned int amount)
 {
-    if (amount + this->_hit_points > this->_max_hit_points)
-        amount = this->_max_hit_points - this->_hit_points;
+    amount = std::min(amount, this->_max_hit_points - this->_hit_points);
     this->_hit_points += amount;
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "HP up oooooo Yah!!! " << "HP increase to -> " << amount << " points!!!" << std::endl;
 
+    pre_message(this->_name, this->_hit_points);
+    std::cout << "Now i feel my self healthier => +" << amount << std::endl;
 }
+
+std::string FragTrap::_vaulthunterQuotes[8] = {
+    "The series of normal jumps!!!",
+    "The funniest jumps in my life!!!",
+    "No one can repeate that ....",
+    "His fart makes me jump.",
+    "I have lost my way.",
+    "I'm not FAT!!!!!!!!!!!!!!!!!!!!!!!",
+    "BOSS the real BOSS",
+    "I am always running (late)."
+};
 
 void		FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
-    attacks cmd[] = {
-            &FragTrap::blablaAttack,
-            &FragTrap::school21Attack,
-            &FragTrap::fartAttack,
-            &FragTrap::lostAttack,
-            &FragTrap::funnyAttack
-    };
 
     if (this->_energy_points < 25)
     {
@@ -119,40 +113,15 @@ void		FragTrap::vaulthunter_dot_exe(std::string const & target)
         std::cout << "You gonna die at the next time!!!" << std::endl;
         return;
     }
-    (this->*cmd[rand() % 5])(target);
+
     this->_energy_points -= 25;
+
+    pre_message(this->_name, this->_hit_points);
+    std::cout << FragTrap::_vaulthunterQuotes[std::rand() % 8] << "  :  " <<target << std::endl;
+
 }
 
-void		FragTrap::blablaAttack(std::string const & target)
+void pre_message(std::string& name, unsigned int hp)
 {
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "It just blabla attack for about 42 points!!! Be ready " << target << "." << std::endl;
+    std::cout << "FR4G-TP " << name << "(" << hp << ") : ";
 }
-
-void		FragTrap::school21Attack(std::string const & target)
-{
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "OOO that's a special attack which takes 21 points!!! " << target << " time to study at school 21!!!" << std::endl;
-}
-
-void		FragTrap::fartAttack(std::string const & target)
-{
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "Hahaha it's  just a joke and take 5 points!!! " << target << " time to... you know to what!"<< std::endl;
-}
-
-void		FragTrap::lostAttack(std::string const & target)
-{
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "It's my stronges attack!!! " << target << " , you will be die!" << std::endl;
-}
-
-void		FragTrap::funnyAttack(std::string const & target)
-{
-    pre_message(this->_name, this->_hit_points);
-    std::cout << "To make some fun!!! " << target << " try to smile sometimes !!!" << std::endl;
-}
-std::string FragTrap::getName() { return this->_name; }
-unsigned int    FragTrap::getEnergyPoint() const { return this->_energy_points; }
-unsigned int    FragTrap::getRangedAttackPoint() const { return this->_ranged_attack_damage; }
-unsigned int    FragTrap::getMelleAttackPoint() const { return this->_melle_attack_damage; }

@@ -1,31 +1,38 @@
-#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-int main()
+int main(void)
 {
-    std::cout << std::endl;
-    ScavTrap clap("Michel");
-    ScavTrap trap("Pavlov");
-    FragTrap frag("Erneste");
+    FragTrap ft("FragTrap");
+    FragTrap ft2(ft);
+
 
     std::cout << std::endl;
-    clap.rangedAttack("Pavlov");
-    trap.takeDamage(20);
-    clap.meleeAttack("Pavlov");
-    trap.takeDamage(30);
-    trap.beRepaired(35);
-    frag.rangedAttack("Michel");
-    trap.beRepaired(80);
-    trap.takeDamage(120);
-    frag.beRepaired(7);
-    trap.beRepaired(33);
-    frag.takeDamage(10);
+    for (int i = 0; i < 5; i++)
+        ft.takeDamage(20);
 
-    frag.vaulthunter_dot_exe("Michel");
-    clap.challengeNewcomer("Pavlov");
-    clap.challengeNewcomer("Pavlov");
-    clap.challengeNewcomer("Pavlov");
+    for (int i = 0; i < 5; i++)
+        ft.beRepaired(30);
 
+    ft.rangedAttack("vovvoy");
+    ft.meleeAttack("sossoy");
+
+    for (int i = 0; i < 5; i++)
+        ft.vaulthunter_dot_exe("Naruto");
+
+    ScavTrap st("ScavTrap");
+    ScavTrap st2(st);
+
+    for (int i = 0; i < 5; i++)
+        st.takeDamage(30);
+
+    for (int i = 0; i < 5; i++)
+        st.beRepaired(25);
+
+    st.rangedAttack("Jenish");
+    st.meleeAttack("Shamil");
+
+    for (int i = 0; i < 5; i++)
+        st.challengeNewcomer("Saske");
     std::cout << std::endl;
-    return (0);
 }

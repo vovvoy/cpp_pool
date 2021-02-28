@@ -8,15 +8,19 @@
 # include "NinjaTrap.hpp"
 
 
-class SuperTrap : public FragTrap, public NinjaTrap
+class SuperTrap : public virtual FragTrap, public virtual NinjaTrap
 {
 public:
-    SuperTrap();
-    SuperTrap(std::string name);
-    SuperTrap(const SuperTrap&);
-    virtual ~SuperTrap();
-    SuperTrap &operator=(const SuperTrap& op);
+    SuperTrap(const std::string name);
+    SuperTrap(const SuperTrap & op);
+    ~SuperTrap();
+
+    SuperTrap &operator=(const SuperTrap & op);
+
+    void rangedAttack(std::string const & target);
+    void meleeAttack(std::string const & target);
 };
 
+static void pre_message(const std::string & name, unsigned int hp);
 
-#endif //SUPERTRAP_HPP
+#endif

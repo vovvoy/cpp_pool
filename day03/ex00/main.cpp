@@ -2,26 +2,20 @@
 
 int main()
 {
-    std::cout << std::endl;
-    FragTrap clap("vovvoy");
-    FragTrap trap("sossoy");
+    FragTrap ft("FragTrap");
+    FragTrap ft2(ft);
 
-    std::cout << std::endl;
-    clap.rangedAttack(trap.getName());
-    trap.takeDamage(clap.getRangedAttackPoint());
-    clap.meleeAttack(trap.getName());
-    trap.takeDamage(clap.getMelleAttackPoint());
-    trap.beRepaired(35);
-    trap.beRepaired(80);
-    trap.takeDamage(120);
-    trap.beRepaired(33);
+    for (int i = 0; i < 5; i++)
+        ft.takeDamage(25);
 
-    clap.vaulthunter_dot_exe(trap.getName());
-    clap.vaulthunter_dot_exe(trap.getName());
-    clap.vaulthunter_dot_exe(trap.getName());
-    clap.vaulthunter_dot_exe(trap.getName());
-    clap.vaulthunter_dot_exe(trap.getName());
+    for (int i = 0; i < 5; i++)
+        ft.beRepaired(25);
 
+    ft.rangedAttack("vovvoy");
+    ft.meleeAttack("sossoy);
+
+    for (int i = 0; i < 6; i++)
+        ft.vaulthunter_dot_exe("Naruto");
     std::cout << std::endl;
     return (0);
 }

@@ -1,10 +1,8 @@
-#ifndef EX01_SCAVTRAP_HPP
-#define EX01_SCAVTRAP_HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
 #include <iostream>
 #include <string>
-#include <cstdlib>
-#include <ctime>
 
 class ScavTrap {
 private:
@@ -18,29 +16,24 @@ private:
     unsigned int	_ranged_attack_damage;
     unsigned int	_armor_damage_reduction;
 
-    void			blablaAttack(std::string const & target);
-    void			school21Attack(std::string const & target);
-    void			fartAttack(std::string const & target);
-    void			lostAttack(std::string const & target);
-    void			funnyAttack(std::string const & target);
+    static  std::string _challenges[8];
+
 public:
-    ScavTrap();
-    ScavTrap(const std::string& name);
-    ScavTrap(const ScavTrap& op);
+    ScavTrap(const std::string & name);
+    ScavTrap(const ScavTrap & op);
     ~ScavTrap();
-    ScavTrap &operator=(const ScavTrap& op);
+
+    ScavTrap & operator=(const ScavTrap& op);
 
     void			rangedAttack(std::string const & target);
     void			meleeAttack(std::string const & target);
     void			takeDamage(unsigned int amount);
     void			beRepaired(unsigned int amount);
+
     void		    challengeNewcomer(std::string const & target);
 
-    std::string     getName();
-    unsigned int    getRangedAttackPoint() const;
-    unsigned int    getMeleeAttackPoint() const;
-    unsigned int    getEnergyPoint() const;
 };
 
+static void pre_message(std::string& name, unsigned int hp);
 
-#endif //EX01_SCAVTRAP_HPP
+#endif

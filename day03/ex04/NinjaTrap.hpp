@@ -3,26 +3,30 @@
 
 # include <iostream>
 # include <string>
+
 # include "ClapTrap.hpp"
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-class NinjaTrap;
 
 class NinjaTrap : virtual public ClapTrap
 {
 public:
-    NinjaTrap();
-    NinjaTrap(std::string name);
-    NinjaTrap(const NinjaTrap&);
-    virtual ~NinjaTrap();
-    NinjaTrap &operator=(const NinjaTrap& op);
+    NinjaTrap(const std::string name);
+    NinjaTrap(const NinjaTrap & op);
+    ~NinjaTrap();
+
+    NinjaTrap &operator=(const NinjaTrap & op);
+
     void			rangedAttack(std::string const & target);
     void			meleeAttack(std::string const & target);
+
     void			ninjaShoebox(ClapTrap & claptrap);
     void			ninjaShoebox(NinjaTrap & claptrap);
     void			ninjaShoebox(ScavTrap & claptrap);
     void			ninjaShoebox(FragTrap & claptrap);
 };
 
-#endif //NINJATRAP_HPP
+void pre_message(const std::string& name, unsigned int hp);
+
+#endif
