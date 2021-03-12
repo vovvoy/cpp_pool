@@ -1,8 +1,3 @@
-//
-// Created by Антон Чапарин on 05.03.2021.
-// Copyright (c) 2021 a-cha. All rights reserved.
-//
-
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
@@ -27,7 +22,7 @@ public:
 	bool isWeapon() const;
 	void recoverAP();
 	void equip(AWeapon* pWeapon);
-	void attack(Enemy* enemy);
+	void attack(Enemy*& enemy);
 	std::string const & getName() const;
 	int getAP() const;
 	std::string getWeaponName() const;
@@ -35,4 +30,4 @@ public:
 
 std::ostream & operator<<(std::ostream & os, const Character & other);
 
-#endif //CHARACTER_HPP
+#endif

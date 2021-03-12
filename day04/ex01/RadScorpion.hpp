@@ -1,7 +1,3 @@
-//
-// Created by Антон Чапарин on 05.03.2021.
-//
-
 #ifndef EX01_RAD_SCORPION_HPP
 #define EX01_RAD_SCORPION_HPP
 
@@ -16,4 +12,4 @@ public:
 };
 
 
-#endif //EX01_RAD_SCORPION_HPP
+#endif

@@ -1,7 +1,3 @@
-//
-// Created by Антон Чапарин on 05.03.2021.
-//
-
 #include "PowerFist.hpp"
 #include <iostream>
 

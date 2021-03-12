@@ -1,7 +1,3 @@
-//
-// Created by Антон Чапарин on 05.03.2021.
-//
-
 #ifndef EX01_SUPERMUTANT_HPP
 #define EX01_SUPERMUTANT_HPP
 
@@ -18,4 +14,4 @@ public:
 };
 
 
-#endif //EX01_SUPERMUTANT_HPP
+#endif

@@ -39,5 +39,5 @@ Peon::getPolymorphed() const
 std::ostream&
 operator <<(std::ostream &stream, Peon &peon)
 {
-	return (stream << "I'm " << peon.getName() << " and I like otters!" << std::endl);
+	return (stream << "I'm " << peon.getName() << " and I like to eat!" << std::endl);
 }

@@ -1,8 +1,3 @@
-//
-// Created by Антон Чапарин on 05.03.2021.
-// Copyright (c) 2021 a-cha. All rights reserved.
-//
-
 #include "Character.hpp"
 #include <iostream>
 
@@ -42,7 +37,7 @@ void Character::equip(AWeapon *pWeapon)
 	this->weapon = pWeapon;
 }
 
-void Character::attack(Enemy *enemy)
+void Character::attack(Enemy *&enemy)
 {
 	if (enemy)
 	{
@@ -55,8 +50,11 @@ void Character::attack(Enemy *enemy)
 				weapon->attack();
 				ap -= weapon->getAPCost();
 				enemy->takeDamage(weapon->getDamage());
-				if (enemy->getHP() == 0)
+				if (enemy->getHP() == 0) {
+
 					delete enemy;
+					enemy = NULL;
+				}
 			} else
 				std::cout << "No enough action points for using "
 						  << weapon->getName() << std::endl;
@@ -64,6 +62,7 @@ void Character::attack(Enemy *enemy)
 			std::cout << "No weapon equipped" << std::endl;
 	} else
 		std::cout << "Is there any alive enemy to fight with?" << std::endl;
+
 }
 
 std::string const &Character::getName() const
@@ -86,12 +85,12 @@ bool Character::isWeapon() const
 	return weapon != NULL;
 }
 
-std::ostream & operator<<(std::ostream & os, const Character & other)
+std::ostream & operator<<(std::ostream & out, const Character & other)
 {
 	if (other.isWeapon())
-		os << other.getName() << " has " << other.getAP() << " AP and wields a "
+		out << other.getName() << " has " << other.getAP() << " AP and wields a "
 		   << other.getWeaponName() << std::endl;
 	else
-		std::cout << other.getName() << " has " << other.getAP() << " AP and is unarmed" << std::endl;
-	return os;
+		out << other.getName() << " has " << other.getAP() << " AP and is unarmed" << std::endl;
+	return out;
 }

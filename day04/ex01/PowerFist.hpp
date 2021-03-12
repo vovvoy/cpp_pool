@@ -1,7 +1,3 @@
-//
-// Created by Антон Чапарин on 05.03.2021.
-//
-
 #ifndef EX01_POWERFIST_HPP
 #define EX01_POWERFIST_HPP
 
@@ -15,4 +11,4 @@ public:
 };
 
 
-#endif //EX01_POWERFIST_HPP
+#endif

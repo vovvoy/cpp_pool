@@ -1,8 +1,3 @@
-//
-// Created by Антон Чапарин on 05.03.2021.
-// Copyright (c) 2021 a-cha. All rights reserved.
-//
-
 #ifndef AWEAPON_HPP
 #define AWEAPON_HPP
 
@@ -29,4 +24,4 @@ public:
 };
 
 
-#endif //AWEAPON_HPP
+#endif

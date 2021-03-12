@@ -1,14 +1,24 @@
-//
-// Created by ljerrica on 10.03.2021.
-//
+#ifndef ELEPHANT_HPP
+#define ELEPHANT_HPP
 
-#ifndef EX00_ELEPHANT_HPP
-#define EX00_ELEPHANT_HPP
+#include "Victim.hpp"
 
+class Elephant : public Victim{
+protected:
+	Elephant();
 
-class Elephant {
+public:
+	Elephant(std::string name);
+	Elephant(const Elephant &other);
 
+	virtual ~Elephant();
+
+	Elephant& operator=(const Elephant &other);
+
+	virtual void getPolymorphed() const;
 };
 
+std::ostream &operator <<(std::ostream &stream, Elephant &peon);
 
-#endif //EX00_ELEPHANT_HPP
+
+#endif

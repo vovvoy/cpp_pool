@@ -1,9 +1,3 @@
-
-//
-// Created by Антон Чапарин on 05.03.2021.
-// Copyright (c) 2021 a-cha. All rights reserved.
-//
-
 #include "AWeapon.hpp"
 
 AWeapon::AWeapon(const std::string &name, int apcost, int damage) :

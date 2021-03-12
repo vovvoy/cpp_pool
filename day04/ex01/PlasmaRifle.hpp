@@ -1,7 +1,3 @@
-//
-// Created by Антон Чапарин on 05.03.2021.
-//
-
 #ifndef EX01_PLASMARIFLE_HPP
 #define EX01_PLASMARIFLE_HPP
 
@@ -15,4 +11,4 @@ public:
 };
 
 
-#endif //EX01_PLASMARIFLE_HPP
+#endif

@@ -3,12 +3,12 @@
 
 #include "Enemy.hpp"
 
-class Azar : public Enemy
+class Joker : public Enemy
 {
 public:
-	Azar();
-	Azar(const Azar &other);
-	~Azar();
+	Joker();
+	Joker(const Joker &other);
+	~Joker();
 
 	void takeDamage(int damage);
 };

@@ -1,8 +1,3 @@
-//
-// Created by Антон Чапарин on 05.03.2021.
-// Copyright (c) 2021 a-cha. All rights reserved.
-//
-
 #ifndef ENEMY_HPP
 #define ENEMY_HPP
 

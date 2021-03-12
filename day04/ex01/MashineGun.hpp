@@ -3,10 +3,10 @@
 
 #include "AWeapon.hpp"
 
-class M : public AWeapon
+class MashineGun : public AWeapon
 {
 public:
-	M();
+	MashineGun();
 	void attack() const;
 };
 

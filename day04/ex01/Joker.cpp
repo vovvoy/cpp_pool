@@ -1,22 +1,22 @@
- #include "Azar.hpp"
+#include "Joker.hpp"
 #include <iostream>
 
-Azar::Azar() : Enemy(200, "Azar")
+Joker::Joker() : Enemy(200, "Joker")
 {
-	std::cout << "* You don’t know the power of the dark side *" << std::endl;
+	std::cout << "* What doesn't kill you, simply make you stranger *" << std::endl;
 }
 
-Azar::Azar(const Azar &other) : Enemy(other)
+Joker::Joker(const Joker &other) : Enemy(other)
 {
-	std::cout << "* You don’t know the power of the dark side *" << std::endl;
+	std::cout << "* What doesn't kill you, simply make you stranger *" << std::endl;
 }
 
-Azar::~Azar()
+Joker::~Joker()
 {
-	std::cout << "* It was said that you would destroy the Sith, not join them! *" << std::endl;
+	std::cout << "* I'm dead but I smile *" << std::endl;
 }
 
-void Azar::takeDamage(int damage)
+void Joker::takeDamage(int damage)
 {
 	reduceHP(damage - 5);
 }
