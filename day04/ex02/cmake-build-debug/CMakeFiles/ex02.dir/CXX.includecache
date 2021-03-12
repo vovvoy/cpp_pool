@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/AssaultTerminator.hpp
+ISpaceMarine.hpp
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/ISpaceMarine.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/ISpaceMarine.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/ISquad.hpp
+ISpaceMarine.hpp
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/ISpaceMarine.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/Squad.hpp
+ISquad.hpp
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/ISquad.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/TacticalMarine.hpp
+ISpaceMarine.hpp
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/ISpaceMarine.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/main.cpp
+iostream
+-
+AssaultTerminator.hpp
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/AssaultTerminator.hpp
+Squad.hpp
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/Squad.hpp
+TacticalMarine.hpp
+/home/ljerrica/Desktop/cpp_pool/day04/ex02/TacticalMarine.hpp
+

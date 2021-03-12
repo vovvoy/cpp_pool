@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ljerrica/Desktop/cpp_pool/day04/ex00/Peon.cpp
+Peon.hpp
+/home/ljerrica/Desktop/cpp_pool/day04/ex00/Peon.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day04/ex00/Peon.hpp
+iostream
+-
+Victim.hpp
+/home/ljerrica/Desktop/cpp_pool/day04/ex00/Victim.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day04/ex00/Victim.hpp
+iostream
+-
+
