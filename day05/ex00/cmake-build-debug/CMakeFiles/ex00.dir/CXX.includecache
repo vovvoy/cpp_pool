@@ -6,7 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/ljerrica/Desktop/cpp_pool/day05/ex00/main.cpp
-bits/stdc++.h
+/home/ljerrica/Desktop/cpp_pool/day05/ex00/Bureaucrat.cpp
+Bureaucrat.hpp
+/home/ljerrica/Desktop/cpp_pool/day05/ex00/Bureaucrat.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day05/ex00/Bureaucrat.hpp
+iostream
 -
+stdexcept
+-
+
+/home/ljerrica/Desktop/cpp_pool/day05/ex00/main.cpp
+iostream
+-
+stdexcept
+-
+Bureaucrat.hpp
+/home/ljerrica/Desktop/cpp_pool/day05/ex00/Bureaucrat.hpp
 

@@ -1,63 +1,44 @@
 #ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
 
-
-# include <string>
 # include <iostream>
-# include <exception>
+# include <stdexcept>
 
 class Bureaucrat
 {
 private:
-	const std::string _name;
-	int _grade;
-
-	int ensureGradeRange(int grade);
+	int                       _grade;
+	std::string               _name;
 
 public:
-	static const int GRADE_LOWEST;
-	static const int GRADE_HIGHEST;
+	Bureaucrat(std::string name, int grade);
+	Bureaucrat(const Bureaucrat &src);
 
-	Bureaucrat(const std::string name, int grade);
-	Bureaucrat(const Bureaucrat &other);
+	~Bureaucrat();
 
-	virtual ~Bureaucrat();
+	Bureaucrat                &operator= (const Bureaucrat &rhs);
 
-	Bureaucrat& operator=(const Bureaucrat &other);
+	void                      incrementGrade(void);
+	void                      decrementGrade(void);
 
-	const std::string& getName() const;
-	int getGrade() const;
-
-	int gradeUP();
-	int gradeDOWN();
-
-	class GradeTooHighException : public std::exception
-	{
-	public:
-		GradeTooHighException();
-		GradeTooHighException(const GradeTooHighException &other);
-
-		virtual ~GradeTooHighException() throw ();
-
-		GradeTooHighException& operator=(const GradeTooHighException & other);
-
-		virtual const char* message() const throw ();
-	};
+	int                       getGrade(void) const;
+	std::string               getName(void) const;
 
 	class GradeTooLowException : public std::exception
 	{
 	public:
-		GradeTooLowException();
-		GradeTooLowException(const GradeTooLowException &other);
-
-		virtual ~GradeTooLowException() throw ();
-
-		GradeTooLowException& operator=(const GradeTooLowException &other);
-
-		virtual const char* message() const throw ();
+		const char    *what() const throw();
 	};
+
+	class GradeTooHighException : public std::exception
+	{
+	public:
+		const char    *what() const throw();
+	};
+
 };
 
-std::ostream& operator<<(std::ostream& outStream, const Bureaucrat& bureaucrat);
+std::ostream                    &operator<< (std::ostream &out, \
+                                  const Bureaucrat &rhs);
 
 #endif
