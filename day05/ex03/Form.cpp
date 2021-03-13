@@ -117,8 +117,8 @@ void Form::execute(const Bureaucrat& executor) const
 
 std::ostream &operator<< (std::ostream &out, const Form &other)
 {
-    out << "The form: " << other.getName() << " which is " \
-        << (other.getSigned() ? "" : "not ") \
+    out << "The form: " << other.getName() \
+        << (other.getSigned() ? " " : " not ") \
         << " signed, which requires a grade " << other.getGradeToSign() \
         << " to sign, and " << other.getGradeToExecute() << " to be executed." \
         << std::endl;

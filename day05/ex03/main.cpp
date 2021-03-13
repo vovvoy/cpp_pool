@@ -8,6 +8,11 @@
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
+#define cout std::cout
+#define endl std::endl
+#define exc std::exception
+
+
 int
 main(void)
 {
@@ -21,14 +26,15 @@ main(void)
 	f1 = i1.makeForm("robotomyRequest", "vovvoy");
 	f2 = i1.makeForm("presidentialPardon", "vovvoy");
 	f3 = i1.makeForm("shrubberyCreation", "vovvoy");
-	std::cout << *f1 << std::endl;
-	std::cout << *f2 << std::endl;
-	std::cout << *f3 << std::endl;
+	cout << *f1 << endl;
+	cout << *f2 << endl;
+	cout << *f3 << endl;
 
 	b1.signForm(*f1);
 	b1.executeForm(*f1);
+	b1.signForm(*f3);
+	b1.executeForm(*f3);
 
 	f4 = i1.makeForm("TEST", "Marvin");
-
 	return (0);
 }
