@@ -1,3 +1,0 @@
-/home/ljerrica/Desktop/cpp_pool/day07/ex02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ljerrica/Desktop/cpp_pool/day07/ex02/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ljerrica/Desktop/cpp_pool/day07/ex02/cmake-build-debug/CMakeFiles/ex02.dir
