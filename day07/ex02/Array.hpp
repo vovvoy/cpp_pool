@@ -1,5 +1,3 @@
-#ifndef ARRAY_HPP
-#define ARRAY_HPP
 #include <exception>
 #include <iostream>
 #include <sstream>
@@ -38,13 +36,13 @@ public:
 		}
 
 		this->_n = other.size();
-		for (int i = 0; i < other.size(); i++)
+		for (unsigned int i = 0; i < other.size(); i++)
 			this->_array[i] = other._array[i];
 
 		return *this;
 	}
 
-	T &operator[](int i) const
+	T &operator[](unsigned int i) const
 	{
 		if (!this->_array || i < 0 || i >= this->_n)
 			throw std::exception();
@@ -58,5 +56,3 @@ public:
 	}
 
 };
-
-#endif

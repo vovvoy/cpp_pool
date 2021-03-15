@@ -4,15 +4,13 @@ SRCS		=	main.cpp
 
 CC			=	g++
 
-DEPS        =   "Array.h"
-
 OBJS		=	$(SRCS:.cpp=.o)
 
 CPPFLAGS		+=	-Wall -Werror -Wextra
 
 all			:	$(NAME)
 
-$(NAME)		:	$(OBJS) $(DEPS)
+$(NAME)		:	$(OBJS)
 				$(CC) -o $(NAME) $(CFLAGS) $(OBJS)
 
 clean		:
