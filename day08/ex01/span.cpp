@@ -1,55 +1,92 @@
 #include <cstdlib>
+#include <algorithm>
+#include <ctime>
 #include "span.hpp"
 
-span::span(unsigned int N) : _array(new int[N]), _size(N), _index(0){ };
+Span::Span(unsigned int N) : _num(N) {
+	_vec.reserve(N);
+};
 
-void span::addNumber(int num) {
-    if (_index >= _size)
-        throw span::OutOfRangeException();
-    _array[_index++] = num;
+Span::Span(Span const &obj)
+{
+	*this = obj;
 }
 
-unsigned int span::longestSpan() {
-    if (_index == 0)
-        throw span::EmptyArrayException();
-    if (_index == 1)
-        throw span::OneElementException();
-    std::sort(_array, _array + _index);
-    return (abs(_array[_index - 1] - _array[0]));
+Span const &Span::operator=(Span const &obj)
+{
+	if (this->_vec == obj._vec)
+		return *this;
+
+	this->_vec = obj._vec;
+	this->_num = obj._num;
+
+	return *this;
 }
 
-unsigned int span::shortestSpan() {
-    unsigned int shortest = INT_MAX;
-
-    if (_index == 0)
-        throw span::EmptyArrayException();
-    if (_index == 1)
-        throw span::OneElementException();
-//    std::sort(_array, _array + _index);
-    for (int i = 0; i < _index; i++)
-        for (int j = 0; j < _index; j++)
-            if (abs(_array[i] - _array[j]) <  shortest)
-                shortest = abs(_array[i] - _array[j]);
-    return (abs(_array[_index - 1] - _array[_index - 2]));
+void Span::addNumber(int num) {
+    if (this->_vec.size() == _num)
+        throw Span::OutOfRangeException();
+	this->_vec.push_back(num);
 }
 
-void span::fillArray(int range) {
-    for (int i = 0; i < range; i++)
-        addNumber(std::rand());
+long  Span::longestSpan() {
+    if (this->_vec.size() < _num)
+        throw Span::FillVectorException();
+	std::sort(this->_vec.begin(), this->_vec.end());
+    return (static_cast<long>(this->_vec[this->_vec.size() - 1] - this->_vec[0]));
 }
 
-const char * span::OneElementException::what() const throw() {
-    return ("Error: Only one element, enter some more...");
+long Span::shortestSpan() {
+	if (this->_vec.size() < _num)
+		throw Span::FillVectorException();
+	long minDiff = 2147483647;
+	long diff;
+
+	std::vector<int> vec = this->_vec;
+	std::sort(vec.begin(), vec.end());
+
+	std::vector<int>::iterator first = vec.begin();
+	for (std::vector<int>::iterator second = vec.begin() + 1; second != vec.end(); second++)
+	{
+		diff = std::abs(static_cast<long>(*second) - static_cast<long>(*first));
+
+		if (diff < minDiff)
+			minDiff = diff;
+
+		first = second;
+	}
+
+	return minDiff;
 }
 
-const char * span::EmptyArrayException::what() const throw() {
-    return ("Error: Empty array, please first fill it");
+void Span::fillArray(int range) {
+	srand(time(NULL));
+	int arr[1000000];
+	for (int i = 0; i < 100000; i++)
+		arr[i] = 0;
+    for (int i = 0; i < range; i++) {
+    	int ret;
+    		while (true) {
+				ret = std::rand() % 1000000;
+				if (!arr[ret]){
+					arr[ret] = 1;
+					break ;
+				}
+			}
+		addNumber(ret);
+	}
 }
 
-const char * span::OutOfRangeException::what() const throw() {
-    return ("Error: You are out of range");
+const char *Span::FillVectorException::what() const throw() {
+    return ("Error: Vector not full");
+}
+const char *Span::OutOfRangeException::what() const throw() {
+	return "Error: Vector out of range";
 }
 
-span::~span() {
-    delete [] _array;
+
+Span::~Span() {
+	std::vector<int>().swap(this->_vec);
 }
+
+

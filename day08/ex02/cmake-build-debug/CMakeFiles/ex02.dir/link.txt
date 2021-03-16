@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ex02.dir/main.cpp.o CMakeFiles/ex02.dir/mutantstack.cpp.o  -o ex02 

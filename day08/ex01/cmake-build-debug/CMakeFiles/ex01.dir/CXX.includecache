@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/ljerrica/Desktop/cpp_pool/day08/ex01/span.cpp
-cstdlib
+/home/ljerrica/Desktop/cpp_pool/day08/ex01/main.cpp
+iostream
+-
+ctime
 -
 span.hpp
-/Users/ljerrica/Desktop/cpp_pool/day08/ex01/span.hpp
+/home/ljerrica/Desktop/cpp_pool/day08/ex01/span.hpp
 
-/Users/ljerrica/Desktop/cpp_pool/day08/ex01/span.hpp
-iostream
+/home/ljerrica/Desktop/cpp_pool/day08/ex01/span.hpp
+vector
+-
+exception
 -
 

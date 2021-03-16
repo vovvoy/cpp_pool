@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/ljerrica/Desktop/cpp_pool/day08/ex00/easyfind.hpp
+/home/ljerrica/Desktop/cpp_pool/day08/ex00/easyfind.hpp
+algorithm
+-
+exception
+-
 
-/Users/ljerrica/Desktop/cpp_pool/day08/ex00/main.cpp
+/home/ljerrica/Desktop/cpp_pool/day08/ex00/main.cpp
 iostream
 -
 vector
 -
 easyfind.hpp
-/Users/ljerrica/Desktop/cpp_pool/day08/ex00/easyfind.hpp
+/home/ljerrica/Desktop/cpp_pool/day08/ex00/easyfind.hpp
 

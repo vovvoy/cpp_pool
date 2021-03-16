@@ -1,14 +1,17 @@
 #ifndef EASYFIND_HPP
 #define EASYFIND_HPP
 
+# include <algorithm>
+# include <exception>
+
 template <typename T>
-void easyfind(T const &array, int num){
-    for (int i = 0; i < array.size(); i++)
-        if (array[i] == num){
-            std::cout << "soccess" << std::endl;
-            return ;
-        }
-    std::cout << "Error: No any matches with " << num << std::endl;
+void easyfind(T &array, int num){
+	typename T::iterator it = std::find(array.begin(), array.end(), num);
+
+	if (it == array.end())
+		throw std::exception();
+
+	std::cout << "soccess -> " <<  *it << std::endl;
 }
 
 #endif

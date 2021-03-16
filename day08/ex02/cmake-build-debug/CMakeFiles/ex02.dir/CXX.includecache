@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ljerrica/Desktop/cpp_pool/day08/ex02/main.cpp
+iostream
+-
+mutantstack.hpp
+/home/ljerrica/Desktop/cpp_pool/day08/ex02/mutantstack.hpp
+
+/home/ljerrica/Desktop/cpp_pool/day08/ex02/mutantstack.hpp
+stack
+-
+
